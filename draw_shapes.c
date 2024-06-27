@@ -26,3 +26,13 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+// Prints an arrow shape by combining a triangle and a square
+void print_arrow(int leftCol, int triSize, int squSize)
+{
+  // Print the triangle
+  print_triangle(leftCol, triSize);
+  // Calculate the left column for the square to center it on the triangle
+  int squareLeftCol = leftCol + triSize - (squSize / 2);
+  // Print the square
+  print_square(squareLeftCol, squSize);
+}
